@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    background: #181818;
+    color: white;
+}
+
+.container {
+    //max-width: 1200px;
+    //margin: auto;
+}
+
+.btn {
+    padding: 15px 60px;
+    border-radius: 40px;
+    border: solid 2px white;
+    color: white;
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn_dark {
+    border-color: black;
+    background: black;
+    color: white;
+    width: calc(100% - 120px);
+}
+
+.btn:hover {
+    border-color: black;
+    background: black;
+    color: white;
+}
+
+.btn_dark:hover {
+    border-color: black;
+    background: white;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    position: relative;
+    z-index: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    position: relative;
+    z-index: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid black;
+    position: relative;
+    z-index: 10px;
+}
+
+.header__outer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 40px;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__menu a {
+    display: block;
+    margin: 0 7px;
+    color: silver;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 13px;
+    padding-top: 7px;
+}
+
+.header__menu a.router-link-exact-active {
+    color: white;
+}
+
+.sidebar__outer {
+    background: rgb(255 255 255 / 3%);
+    padding: 20px;
+    height: 100%;
+    overflow-y: scroll;
+    width: 300px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: conic-gradient(from 90deg at 50% 51.52%, #4589ff 0deg, #ff7eb6 141.23deg, #f1c21b 231.23deg, #49cd7a 287.48deg, #4589ff 360deg);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+    //background-size: 200% 100%;
+    animation: 6s ease 0s infinite alternate none running hue;
+    padding-top: 80px;
+}
+
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(-1turn);
+    }
+}
+
+.sidebar__search-block {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid 1px #ffffff4d;
+}
+
+.sidebar__search-input {
+    padding: 10px 20px;
+    border-radius: 7px;
+    transition-duration: 0.4s;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.312));
+    background: #ffffffa1;
+    border: solid 1px #ffffff24;
+    outline: none;
+    color: black;
+    width: calc(100% - 50px - 40px - 2px);
+    font-size: 17px;
+}
+
+.sidebar__search-input::placeholder {
+    color: black;
+    font-size: 17px;
+    opacity: 0.8;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sidebar__seach-button {
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.289));
+}
+
+.sidebar__mix-button {
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.289));
+}
+
+.sidebar__seach-button img {
+    width: 100%;
+}
+
+.sidebar__mix-button img {
+    width: 100%;
+}
+
+.sidebar__song-list {
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+}
+
+.sidebar__song-delete {
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    cursor: pointer;
+    zoom: 0.8;
+}
+
+.sidebar__song-item {
+    border-radius: 15px;
+    padding: 10px 20px;
+    background: rgb(36 36 36 / 70%);
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.712));
+}
+
+.sidebar__song-list_start .sidebar__song-item:nth-child(1) {
+    background: rgba(255, 0, 174, 0.645);
+}
+
+.sidebar__song-item:hover {
+    background: rgba(255, 0, 174, 0.645);
+}
+
+.sidebar__song-item_active {
+    background: rgba(255, 0, 174, 0.645);
+}
+
+.sidebar__song-name {
+    margin-bottom: 7px;
+    font-size: 17px;
+}
+
+.sidebar__song-author {
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+.song__outer {
+    margin-left: 370px;
+    padding-right: 40px;
+    padding-top: 30px;
+}
+
+.song__inner {
+    background: #f9f9f926;
+    border-radius: 30px;
+    padding: 60px;
+    min-height: 1000px;
+}
+
+.song__block {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    grid-column-gap: 100px;
+    min-height: 1000px;
+}
+
+.song__name {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.song__author {
+    opacity: 0.7;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.song__tabs {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.song__tab-block {
+    margin-right: 6px;
+}
+
+.song__tab-item {
+    padding: 3px 35px;
+    background: #efefefa6;
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.536));
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.song__tab-item:hover {
+    background: #cf2abc70;
+    color: white;
+}
+
+.song__tab-item_active {
+    background: #cf2abc70;
+    color: white;
+}
+
+.song__keys {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.songs__text-line {
+    margin-bottom: 7px;
+}
+
+.song__chords {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.655));
+}
+
+.song__chords-inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    content: '';
+    left: 0;
+    top: 40px;
+}
+
+.song__chord-item {
+    margin-right: 10px;
+}
+
+.admin__outer {
+    margin-left: 470px;
+    padding-right: 40px;
+    padding-top: 30px;
+}
+
+.admin__control-buttons {
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.admin__create-button,
+.admin__update-button {
+    border-radius: 5px;
+    padding: 7px 15px;
+    background: silver;
+    margin-right: 17px;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.3;
+}
+
+.admin__create-button:hover,
+.admin__update-button:hover {
+    filter: invert(1)
+}
+
+.admin__form-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.admin__form input {
+    display: block;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-bottom: 13px;
+}
+
+.admin__form-button {
+    padding: 15px 85px;
+    background: purple;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    width: fit-content;
+    transition-duration: 0.4s;
+}
+
+.admin__form-button:hover {
+    opacity: 0.8;
+}
