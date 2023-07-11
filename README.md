@@ -9,6 +9,9 @@ This project is a SongsApp, an application for managing and organizing songs. It
 - User authentication: Implemented Spring Security for user authentication and authorization.
 - Email confirmation: Users receive an email confirmation to verify their account during the registration process.
 
+## Database schema
+![db-scheme](https://raw.githubusercontent.com/Larisa-Pomidor/SongsApp/master/songs_db_3.png)
+
 ## Technologies Used
 - Backend: Java, Spring Boot, Spring Security
 - Frontend: Vue.js
